@@ -1,1 +1,30 @@
+import java.util.Scanner;
 
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Bir sayi giriniz: ");
+
+        int toplam = 0;
+
+       int sayi = scan.nextInt();
+
+        for(int i = 1; i < sayi; i++)
+        {
+            // sayının çarpanlarını belirliyoruz
+            if(sayi % i == 0) {
+                toplam += i;
+            }
+        }
+        // çarpanlarının toplamı sayının kendisine eşit ise mük değilse değil:)
+            if(sayi == toplam) {
+            System.out.println(sayi + " Mükemmel bir sayidir");
+        }
+        else {
+            System.out.println(sayi + " Mükemmel bir sayi degildir.");
+        }
+    }
+}
